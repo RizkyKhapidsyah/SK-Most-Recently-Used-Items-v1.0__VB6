@@ -1,0 +1,10 @@
+REGEDIT4
+
+[HKEY_USERS\.DEFAULT\SOFTWARE\VB and VBA Program Settings\Company]
+
+[HKEY_USERS\.DEFAULT\SOFTWARE\VB and VBA Program Settings\Company\Application]
+"ItemNum"="3"
+"Item1"="A"
+"Item2"="B"
+"Item3"="C"
+

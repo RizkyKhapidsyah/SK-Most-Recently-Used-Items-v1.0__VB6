@@ -1,0 +1,59 @@
+MRU - Most Recently Used items v1.0
+
+================================================================================
+
+This program use MRU.dll for saving list of most recently used items in  Windows
+registry. If you use this DLL in your program, items could be file names, paths,
+picture names, or anything else.
+
+Example application shows you how use MRU.DLL, how to maintain the menu items 
+according to MRU list.
+
+The code of MRU.DLL is provided too.
+
+
+== MRU.DLL =====================================================================
+
+MRU.DLL saves its data in registry under:
+HKEY_USERS\.DEFAULT\SOFTWARE\VB and VBA Program Settings
+
+--------------------------------------------------------------------------------
+
+.Parent="Company"
+.Child="Application"
+.Prefix="Item"
+
+--
+
+REGEDIT4
+[HKEY_USERS\.DEFAULT\SOFTWARE\VB and VBA Program Settings\Company]
+[HKEY_USERS\.DEFAULT\SOFTWARE\VB and VBA Program Settings\Company\Application]
+"ItemNum"="3"
+"Item1"="A"
+"Item2"="B"
+"Item3"="C"
+
+--------------------------------------------------------------------------------
+
+.Parent   - property defines the main subkey of list and it could be used for 
+            name of your company (default="MRU")
+
+.Child    - property defines the subkey of .Parent and it could be used for name
+            of your application (default="MRU")
+
+.Suffix   - property defines prefix used for numbering items (default="MRU")
+
+.MaxNum   - property defines the maximum numbef of items that  will be  
+            maintained by most recently used list (default=10)
+
+.Num      - property (read-only) that shows how much items is currently in list
+
+.Last     - property retrieving the last item from list of MRU's
+
+.Clear    - method for clearing registry keys under .Child subkey
+
+.ClearAll - method for clearing parent key and its subkeys
+
+.Save     - methos for saving item in MRU list
+
+================================================================================
